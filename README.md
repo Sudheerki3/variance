@@ -81,20 +81,20 @@ The Historical Method was chosen as a baseline for comparison because it relies 
 
 #### Steps  
 1. Sort historical returns in ascending order.  
-2. Identify the quantile at (1−Confidence Level).  
+2. Identify the quantile at $(1−Confidence Level)$.  
 3. Compute CVaR as the average of returns below the VaR threshold.
 
 #### Equations  
 - VaR:  
   $$ \text{VaR}_{\text{Historical}} = \text{Quantile at } (1 - \text{Confidence Level}) $$
   Where:  
-  - Confidence Level : The percentage level at which risk is estimated (e.g., 95%).
+  - $Confidence Level$ : The percentage level at which risk is estimated (e.g., 95%).
 
 - CVaR:  
   $$ \text{CVaR}{\text{Historical}} = \frac{\sum{r \leq \text{VaR}} r}{N} $$
   Where:  
-  - \( r \): Returns below the VaR threshold.  
-  - \( N \): Total number of returns below VaR.
+  - $r$: Returns below the VaR threshold.  
+  - $N$: Total number of returns below VaR.
 
 ---
 
@@ -114,18 +114,18 @@ The Parametric Method, also known as the Variance-Covariance Method, assumes tha
 This method is widely used due to its simplicity and computational speed. It provides standardized risk metrics under the assumption of normally distributed returns.
 
 #### Steps  
-1. Calculate the mean (\( \mu \)) and standard deviation (\( \sigma \)) of daily returns.  
+1. Calculate the mean $\mu$ and standard deviation $\sigma$ of daily returns.  
 2. Compute VaR using:
    $$ \text{VaR}_{\text{Parametric}} = \mu + \sigma \cdot \Phi^{-1}(1 - \text{Confidence Level}) $$
    Where:  
-   - μ : Mean daily return.  
-   - σ : Standard deviation of daily returns.  
-   - Φ^-1: Inverse cumulative distribution function (CDF) of the standard normal distribution.  
+   - $μ$ : Mean daily return.  
+   - $σ$ : Standard deviation of daily returns.  
+   - $Φ^-1$: Inverse cumulative distribution function (CDF) of the standard normal distribution.  
 
 3. Compute CVaR using:
    $$ \text{CVaR}_{\text{Parametric}} = \mu - \frac{\sigma \cdot \phi(\Phi^{-1}(1 - \text{Confidence Level}))}{1 - \text{Confidence Level}} $$
    Where:  
-   - ϕ: Probability density function (PDF) of the standard normal distribution.
+   - $ϕ$: Probability density function (PDF) of the standard normal distribution.
 
 ---
 
@@ -149,8 +149,8 @@ Monte Carlo Simulation is ideal for scenarios where return distributions deviate
 1. Simulate \( N \) returns:
    $$ \text{Simulated Returns} \sim \mathcal{N}(\mu, \sigma^2) $$
    Where:  
-   - μ : Mean daily return.  
-   - σ^2: Variance of daily returns.
+   - $μ$: Mean daily return.  
+   - $σ^2$: Variance of daily returns.
 
 2. Compute VaR as:
    $$ \text{VaR}_{\text{Monte Carlo}} = \text{Quantile at } (1 - \text{Confidence Level}) $$

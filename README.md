@@ -168,7 +168,9 @@ Monte Carlo Simulation is ideal for scenarios where return distributions deviate
    $$
 
 3. Compute CVaR as the average of returns below the VaR threshold:
-   $$ \text{CVaR}{\text{Monte Carlo}} = \frac{\sum{r \leq \text{VaR}} r}{N} $$
+   $$
+   \text{CVaR}{\text{Monte Carlo}} = \frac{\sum{r \leq \text{VaR}} r}{N}
+   $$
 
 ---
 

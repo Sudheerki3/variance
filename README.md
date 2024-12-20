@@ -195,7 +195,7 @@ Historical stock prices (January 2020 to December 2024) fetched using yfinance.
 ### Data Preprocessing
 - Calculate daily returns:
   
-  $\text{Daily Returns} = \frac{\text{Adj Close}_t - \text{Adj Close}_{t-1}}{\text{Adj Close}_{t-1}}$
+  $\text{Daily Returns}$ = $\frac{\text{Adj Close}_t - \text{Adj Close}_{t-1}}{\text{Adj Close}_{t-1}}$
   
 - Remove missing values.
 
